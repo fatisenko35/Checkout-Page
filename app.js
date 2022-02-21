@@ -75,6 +75,7 @@ function totalf() {
     tax.children[1].innerHTML = Math.round(totalAmount2 * 0.18);
     taxTotal = +tax.children[1].innerHTML;
     let Total = 0;
-    Total = totalAmount2 + taxTotal + totalAmount2 ? +shipping.children[1].innerHTML :shipping.children[1].innerHTML = 0;
+    totalAmount2 ? shipping.children[1].innerHTML = +shipping.children[1].innerHTML :shipping.children[1].innerHTML = 0
+    Total = totalAmount2 + taxTotal + +shipping.children[1].innerHTML;
     cartTotal.children[1].innerHTML = Total
 };
